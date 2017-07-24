@@ -6,22 +6,29 @@
   <link rel="stylesheet" href="/css/styles.css">
 </head>
 
-<body>
-  <p>Chat app.</p>
+<body class="chat">
+  
+  <div class="chat__sidebar">
+    <h3>People</h3>
+    <div id="users"></div>
+  </div>
 
-  <ul id="messages">
+  <div class="chat__main">
+    <ul id="messages" class="chat__messages"></ul>
 
-  </ul>
-
-  <form id="message-form">
+    <div class="chat__footer">
+      <form id="message-form">
     <input name="message" type="text" placeholder="Type message here." autofocus autocomplete="off" />
     <button>Send</button>
   </form>
   <button id="location">Share Location</button>
+    </div>  
+  </div>  
   
 
   <script src="/socket.io/socket.io.js"></script>
   <script src="/javascript/libs/jquery-3.2.1.min.js"></script>
+  <script src="/javascript/libs/moment.js"></script>
   <script src="/javascript/index.js"></script>
 </body>
 </html>
